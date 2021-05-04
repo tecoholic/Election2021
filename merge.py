@@ -1,22 +1,28 @@
 import os
 import pandas as pd
 
+base_dir = os.path.join("may2021", "TN")
 
-def get_symbol(full):
-    parts = full.split(" ")
+df = None
+
+
+def get_code(party):
+    parts = party.split(" ")
     return "".join(p[0] for p in parts).upper()
 
 
-df = None
 for i in range(1, 235):
-    fname = os.path.join("may2021", "TN", f"{i}.csv")
-    data = pd.read_csv(fname)
+    filename = os.path.join(base_dir, f"{i}.csv")
+
+    data = pd.read_csv(filename)
     data["AC_NO"] = i
     data["Position"] = data["Total Votes"].rank(ascending=False).astype('int')
-    data["Party Code"] = data["Party"].apply(get_symbol)
+    data["Party Code"] = data["Party"].apply(get_code)
+
     if df is None:
         df = data
     else:
         df = df.append(data)
 
-df.to_csv(os.path.join("may2021", "TN", "all_candidate.csv"), index=False)
+fname = os.path.join(base_dir, "all_candidate.csv")
+df.to_csv(fname, index=False)
