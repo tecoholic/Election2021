@@ -1,17 +1,23 @@
 # Election 2021
 
-The folder contains all the work that is done for 2021 Assembly Elections (primarily for Tamil Nadu)
+The folder contains all the work that is done for 2021 Assembly Elections.
+
+1. Assam
+2. Kerala
+3. Puducherry
+4. Tamil Nadu
+5. West Bengal
 
 ## Looking for just the data?
 
-Download the ZIP file and look inside the `may2021/TN` folder for all 234 CSV files.
-
+Download the ZIP file and look inside the `may2021/<state-code>` folder for CSV files of all constituencies stored by their constituency number.
+There is also a `all_candidate.csv` file each of the state folders which is the combined file of all the constituencies
 
 ## Using the software
 
 ### Pre-requisites
 
-* Python 3.7 or higher installed in your computer
+- Python 3.7 or higher installed in your computer
 
 ### Install Dependencies
 
