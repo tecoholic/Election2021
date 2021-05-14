@@ -13,6 +13,8 @@ The folder contains all the work that is done for 2021 Assembly Elections.
 Download the ZIP file and look inside the `may2021/<state-code>` folder for CSV files of all constituencies stored by their constituency number.
 There is also a `all_candidate.csv` file each of the state folders which is the combined file of all the constituencies
 
+**Note:** Tamil Nadu folder has an extra file called `all_candidate.xlsx` with extra information. Thanks to [@sujays](https://twitter.com/sujays)
+
 ## Using the software
 
 ### Pre-requisites
